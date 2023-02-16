@@ -1,0 +1,8 @@
+<div class="row">
+  <% for post in @posts %>
+    <div class="col-3">
+      <h4><%= post["title"] %></h4>
+      <p><%= post["created_at"] %></p>
+    </div>
+  <% end %>
+</div>
