@@ -3,9 +3,9 @@ class PlacesController < ApplicationController
       @places = Place.all
     end
   
-  def show
-        @places = Place.find_by({ "id" => @post["place_id"] })
-      end
+    def show
+      @place = Place.find_by({ "id" => params["id"] })
+    end
     
       def new
         @place = Place.new
