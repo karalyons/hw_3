@@ -1,4 +1,4 @@
-class PostController < ApplicationController
+class PostsController < ApplicationController
 
     def show
         @post = Post.find_by({ "id" => params["id"] })
@@ -7,5 +7,6 @@ class PostController < ApplicationController
     
       def new
         @post = Post.new
+        
       end
 end
