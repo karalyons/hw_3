@@ -1,0 +1,19 @@
+<h1><%= @place["name"] %> <div class="col-7 text-end"><a href="/posts/new?place_id=<%= @place["id"] %>" class="btn btn-success">New Post for <%= @place["name"] %></a></div></h1>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<ul>    
+    <% posts = Post.where({"place_id" => @place["id"]}) %>
+    <% for post in posts %>
+        <div class="col-3">
+            <h4><%= post["title"] %></h4>
+            <p><%= post["description"] %></p>
+            <p><%= post["posted_on"] %></p>
+        </div>
+    <% end %>
+</ul>
+
+<p>
+    <a href="/places">Back to all places</a>
+</p>
