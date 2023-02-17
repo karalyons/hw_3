@@ -19,4 +19,5 @@ class PostsController < ApplicationController
         @post["place_id"] = params["post"]["place_id"]
         @post.save
         redirect_to "/places"
+      end
 end
